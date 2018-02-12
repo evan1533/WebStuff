@@ -1,11 +1,15 @@
-var result = document.querySelector('#backImg');
+
 
 if (window.Worker) { // Check if Browser supports the Worker api.
     // Requires script name as input
-    var myWorker = new Worker("image_worker.js");
+    var myWorker = new Worker("addLetter.js");
+    var txt = document.getElementById('world').innerHTML;
+    myWorker.postMessage(txt.length+1);
+    console.log("PRESS")
 
     myWorker.onmessage = function (e) {
-        result.src = e.data;
+        document.getElementById('world').innerHTML = e.data;
         console.log('Message received from worker');
+        addLetter();
     };
 }
