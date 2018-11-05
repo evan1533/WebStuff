@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+      function buttPress() {
+        document.getElementById("PRESS").innerHTML = "TRUE";
+      }
+  </script>
+  <meta charset="UTF-8">
+  <title>The Three W's</title>
+  <link rel="stylesheet" type="text/css" href="path to css stylesheet">
+</head>
+<body>
+  <h1>
+    The Three W's
+  </h1>
+  <h2>
+    Word, Were, Work.
+  </h2>
+  <div>
+    <input name="FileInp" id="FileInp" type="file" accept=".wav">
+  </div>
+  <div>
+    <button name="Sub" onclick="buttPress()">Submit</button>
+  </div>
+  <p>Enter a .wav file above</p>
+  <p id="PRESS">FALSE</p>
+</body>
+</html>
